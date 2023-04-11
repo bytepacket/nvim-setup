@@ -1,0 +1,19 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "Crypto",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Arif812/QuCoin.git"
+  },
+  "author": "Arif Khan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Arif812/QuCoin/issues"
+  },
+  "homepage": "https://github.com/Arif812/QuCoin#readme"
+}
