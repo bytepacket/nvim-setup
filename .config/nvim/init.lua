@@ -30,8 +30,15 @@ dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 
 require "options"
+require "mappings"
 require "nvchad.autocmds"
 
 vim.schedule(function()
   require "mappings"
 end)
+
+require 'nvim-tree'.setup {
+  filters = {
+    custom = {'.DS_Store'}
+  }
+}
