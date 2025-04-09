@@ -1,7 +1,11 @@
 require "nvchad.mappings"
 
 -- add yours here
+local harpoon = require("harpoon")
 
+-- REQUIRED
+harpoon:setup({})
+-- add your mappings here
 local map = vim.keymap.set
 
 map("n", ";", ":", { desc = "CMD enter command mode" })
@@ -26,3 +30,7 @@ map("n", "<Leader>dr", "<cmd>lua require'dap'.run_last()<CR>", { desc = "Debugge
 
 -- rustaceanvim
 map("n", "<Leader>dt", "<cmd>lua vim.cmd('RustLsp testables')<CR>", { desc = "Debugger testables" })
+
+-- harpoon
+map("n", "<leader>a", function() harpoon:list():add() end, { desc = "Harpoon add file" })
+map("n", "<C-e>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, { desc = "Harpoon quick menu" })
